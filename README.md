@@ -1,0 +1,7 @@
+最简单的基于Spring Boot/Cloud使用Oauth2分布式鉴权教程.
+
+代码我尽量给出了最简单的形式,只需要你有最基础的Spring Boot基础就能看懂.
+
+新手请按照文件夹顺序一个一个的看,authorization_server是授权服务,resource_server是资源服务,使用test项目中的用例执行测试
+
+每个项目中的文件都非常少,请阅读代码中的注释,相信你一定能看得懂.
