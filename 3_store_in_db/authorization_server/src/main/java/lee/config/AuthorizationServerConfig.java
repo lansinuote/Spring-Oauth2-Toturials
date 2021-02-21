@@ -80,7 +80,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
         scope VARCHAR(128),
         status VARCHAR(10),
         expiresAt TIMESTAMP,
-        lastModifiedAt TIMESTAMP
+        lastModifiedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     );
 
 
