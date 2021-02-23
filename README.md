@@ -30,6 +30,8 @@ test项目不需要运行,它不是一个服务,你可以在test项目中的src\
 
 视频课程已发布
 
-simple_token:https://www.bilibili.com/video/BV1p5411N7Po
+1.最简单的使用SpringOAuth2进行分布式权限管理:https://www.bilibili.com/video/BV1p5411N7Po
+
+2.在SpringOAuth2中使用JwtToken和数据库持久化:https://www.bilibili.com/video/BV1Py4y1a7Nu
 
 连载中...
