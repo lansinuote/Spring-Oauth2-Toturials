@@ -50,23 +50,24 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
                 .authorizedGrantTypes("authorization_code", "password", "client_credentials", "implicit", "refresh_token")
 
                 //授权的范围,每个resource会设置自己的范围.
-                .scopes("scope1", "scope2")
+                .scopes("scope1")
 
                 //这个是设置要不要弹出确认授权页面的.
                 .autoApprove(false)
 
                 //这个相当于是client的域名,重定向给code的时候会跳转这个域名
-                .redirectUris("http://www.baidu.com");
+                .redirectUris("http://www.baidu.com")
 
-                /*.and()
+                .and()
 
+                //在spring cloud的测试中,我们有两个资源服务,这里也给他们配置两个client,并分配不同的scope.
                 .withClient("client2")
                 .secret(passwordEncoder.encode("123123"))
-                .resourceIds("resource1")
+                .resourceIds("resource2")
                 .authorizedGrantTypes("authorization_code", "password", "client_credentials", "implicit", "refresh_token")
-                .scopes("all")
+                .scopes("scope2")
                 .autoApprove(false)
-                .redirectUris("http://www.qq.com");*/
+                .redirectUris("http://www.sogou.com");
     }
 
 

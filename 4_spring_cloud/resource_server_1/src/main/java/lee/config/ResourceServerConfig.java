@@ -34,8 +34,8 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
         http.csrf().disable()
                 .authorizeRequests()
 
-                //本项目所需要的授权范围,这个scope是写在auth服务的配置里的
-                .antMatchers("/**").access("#oauth2.hasScope('scope1')")
+                //由于在zuul已经做了scope的校验,这里可以不写了.当然你想写上也是没有问题的
+                .antMatchers("/**").permitAll()//.access("#oauth2.hasScope('scope1')")
 
                 .and()
 

@@ -1,0 +1,17 @@
+server:
+  port: 4002
+spring:
+  application:
+    name: resource_server2
+  cloud:
+    client:
+      ipAddress: 127.0.0.1
+eureka:
+  instance:
+    prefer-ip-address: false
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+    hostname: ${spring.cloud.client.ipAddress}
+  client:
+    serviceUrl:
+      #eurekaServers
+      defaultZone: http://127.0.0.1:2001/eureka
