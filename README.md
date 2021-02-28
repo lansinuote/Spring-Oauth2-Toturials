@@ -34,4 +34,4 @@ test项目不需要运行,它不是一个服务,你可以在test项目中的src\
 
 2.在SpringOAuth2中使用JwtToken和数据库持久化:https://www.bilibili.com/video/BV1Py4y1a7Nu
 
-连载中...
+3.在SpringCloud微服务架构中使用SpringOAuth2(完结):https://www.bilibili.com/video/BV1Ky4y1e7JJ
