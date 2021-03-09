@@ -1,0 +1,25 @@
+server:
+  port: 2001
+spring:
+  application:
+    name: eureka
+  cloud:
+    client:
+      ipAddress: 127.0.0.1
+eureka:
+  instance:
+    #基于ip配置
+    prefer-ip-address: false
+    #自定义id
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+    hostname: ${spring.cloud.client.ipAddress}
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+    #注册到其他eureka
+    registerWithEureka: false
+    #从其他eureka拉取信息
+    fetchRegistry: false
+  server:
+    #自我保护
+    enable-self-preservation: false
